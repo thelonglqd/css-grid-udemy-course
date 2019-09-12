@@ -3,6 +3,37 @@
   font-weight: 400;
 }
 
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  line-height: 1;
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.6rem;
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
 .heading-4 {
   @extend %heading;
   font-size: 1.9rem;
@@ -14,4 +45,20 @@
   &--light {
     color: $color-grey-light-1;
   }
+}
+
+.sm-mb {
+  margin-bottom: 1rem;
+}
+
+.md-mb {
+  margin-bottom: 2rem;
+}
+
+.lg-mb {
+  margin-bottom: 4rem;
+}
+
+.hg-mb {
+  margin-bottom: 8rem;
 }

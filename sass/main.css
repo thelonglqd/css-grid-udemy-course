@@ -31,9 +31,38 @@ body {
       grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
 }
 
-.heading-4 {
+.heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.heading-2--dark {
+  color: #54483a;
+}
+
+.heading-2--light {
+  color: #f9f7f6;
+}
+
+.heading-2--italic {
+  font-style: italic;
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+}
+
+.heading-3--primary {
+  color: #c69963;
+}
+
+.heading-3--uppercase {
+  text-transform: uppercase;
 }
 
 .heading-4 {
@@ -46,6 +75,22 @@ body {
 
 .heading-4--light {
   color: #f9f7f6;
+}
+
+.sm-mb {
+  margin-bottom: 1rem;
+}
+
+.md-mb {
+  margin-bottom: 2rem;
+}
+
+.lg-mb {
+  margin-bottom: 4rem;
+}
+
+.hg-mb {
+  margin-bottom: 8rem;
 }
 
 .sidebar {
@@ -102,13 +147,49 @@ body {
 }
 
 .story__pictures {
-  background-color: #54483a;
+  background-color: #aaa;
   grid-column: full-start / col-end 4;
 }
 
 .story__content {
-  background-color: #6d5d4b;
   grid-column: col-start 5 / full-end;
+  padding: 6rem 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.story__content__text {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.story__content__btn {
+  border: none;
+  border-radius: 0;
+  background-color: #c69963;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 1.8rem 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.story__content__btn:hover {
+  background-color: #b28451;
 }
 
 .homes {
