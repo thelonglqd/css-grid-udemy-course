@@ -26,9 +26,26 @@ body {
   -ms-grid-rows: 80vh min-content 40vw (min-content)[3];
       grid-template-rows: 80vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
       grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  -ms-grid-columns: [sidebar-start] 6rem [sidebar-end full-start] 1fr [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] 1fr [full-end];
-      grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
-      grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  -ms-grid-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(8rem, 1fr) [full-end];
+      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+      grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+}
+
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.heading-4--dark {
+  color: #54483a;
+}
+
+.heading-4--light {
+  color: #f9f7f6;
 }
 
 .sidebar {
@@ -47,8 +64,41 @@ body {
 }
 
 .features {
-  background-color: #101d2c;
   grid-column: center-start / center-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  margin: 15rem 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.feature {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+.feature__img {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.feature__text {
+  font-size: 1.7rem;
 }
 
 .story__pictures {
