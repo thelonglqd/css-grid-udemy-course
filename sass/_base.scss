@@ -38,10 +38,25 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] minmax(
-      8rem,
-      1fr
-    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(8rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(8rem, 1fr) [full-end];
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  background-color: $color-primary;
+  color: #fff;
+  font-family: $font-display;
+  padding: 1.8rem 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
 }
