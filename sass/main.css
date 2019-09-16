@@ -49,9 +49,15 @@ body {
   background-color: #b28451;
 }
 
-.heading-2, .heading-3, .heading-4 {
+.heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #fff;
+  line-height: 1;
 }
 
 .heading-2 {
@@ -73,6 +79,8 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
+  color: #c69963;
+  text-transform: uppercase;
 }
 
 .heading-3--primary {
@@ -85,6 +93,7 @@ body {
 
 .heading-4 {
   font-size: 1.9rem;
+  color: #c69963;
 }
 
 .heading-4--dark {
@@ -119,6 +128,44 @@ body {
 .header {
   background-color: #54483a;
   grid-column: full-start / col-end 6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 29, 44, 0.93)), to(rgba(16, 29, 44, 0.93))), url(../img/hero.jpeg);
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr min-content 6rem 1fr;
+      grid-template-rows: 1fr -webkit-min-content 6rem 1fr;
+      grid-template-rows: 1fr min-content 6rem 1fr;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-row-gap: 1.5rem;
+}
+
+.header__logo {
+  height: 3rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.header__btn {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.header__seenon__logos img {
+  height: 2.5rem;
 }
 
 .realtors {

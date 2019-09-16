@@ -3,6 +3,13 @@
   font-weight: 400;
 }
 
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  color: #fff;
+  line-height: 1;
+}
+
 .heading-2 {
   @extend %heading;
   font-size: 4rem;
@@ -24,6 +31,8 @@
 .heading-3 {
   @extend %heading;
   font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: uppercase;
 
   &--primary {
     color: $color-primary;
@@ -37,6 +46,7 @@
 .heading-4 {
   @extend %heading;
   font-size: 1.9rem;
+  color: $color-primary;
 
   &--dark {
     color: $color-grey-dark-1;
