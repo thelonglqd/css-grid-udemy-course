@@ -122,6 +122,39 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-row: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: none;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+}
+
+.nav-btn::before, .nav-btn::after {
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  content: "";
+  display: block;
+}
+
+.nav-btn::before {
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.nav-btn::after {
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
 }
 
 .header {
@@ -218,6 +251,7 @@ body {
 .realtors__tops {
   margin-left: auto;
   margin-right: auto;
+  text-transform: uppercase;
 }
 
 .realtors__list {
